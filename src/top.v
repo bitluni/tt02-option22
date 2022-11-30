@@ -1,13 +1,13 @@
 module option22 (
-    input [3:0] in,
-    output reg [7:0] out
+    wire io_in [7:0], 
+    reg io_out[7:0]
 );
 parameter WORD_COUNT = 64;
 
-wire clk = in[0];
-wire reset = in[1];
-wire write = in[2];
-wire din = in[3];
+wire clk = io_in[0];
+wire reset = io_in[1];
+wire write = io_in[2];
+wire din = io_in[3];
 
 reg [2:0] count;
 reg [WORD_COUNT * 8 - 1:0] buffer;
@@ -16,18 +16,18 @@ always@(posedge clk or posedge reset) begin
 
     if(reset) begin
         count <= 3'd0;
-        out <= 8'd0;
+        io_out <= 8'd0;
     end else 
     begin
         if(write) begin
             buffer <= {buffer[WORD_COUNT * 8 - 2:0], din};
             if(count == 3'b111) begin
-                out <= {buffer[6:0],din};
+                io_out <= {buffer[6:0],din};
             end
         end else begin
             buffer <= {buffer[WORD_COUNT * 8 - 2:0], buffer[WORD_COUNT * 8 - 1]};
             if(count == 3'b111) begin
-                out <= {buffer[6:0],buffer[WORD_COUNT * 8 - 1]};
+                io_out <= {buffer[6:0],buffer[WORD_COUNT * 8 - 1]};
             end
         end
         count <= count + 3'd1;
