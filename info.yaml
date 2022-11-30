@@ -20,7 +20,7 @@ documentation:
   description:  "Looong shift register for POV displays"      # Short description of what your project does
   how_it_works: "write=high: Data is shifted in on clock positive edge. Each full 8 bits will be staged to output. It will rotate rough all words with the clock. Reset only resets internal counter for the byte index."      # Longer description of how the project works
   how_to_test:  "Keep write high and push data in with clock mayby as button."      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  ""      # Describe any external hardware needed
+  external_hw:  "Pink LEDs"      # Describe any external hardware needed
   language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     0       # Clock frequency in Hz (if required) we are expecting max clock frequency to be ~6khz. Provided on input 0.
