@@ -1,7 +1,7 @@
 --- 
 # TinyTapeout project information
 project:
-#   wokwi_id:    0 # If using wokwi, set this to your project's ID
+  wokwi_id:    0 # If using wokwi, set this to your project's ID
   source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. Source files must be in ./src
      - top.v
   top_module:  "option22"      # put the name of your top module here, make it unique by prepending your github username
