@@ -1,5 +1,5 @@
 module option22 (
-    input [7:0] in,
+    input [3:0] in,
     output reg [7:0] out
 );
 parameter WORD_COUNT = 64;
