@@ -1,6 +1,6 @@
 module option22 (
-    input wire io_in [7:0], 
-    output reg io_out[7:0]
+    input wire [7:0] io_in, 
+    output reg [7:0] io_out
 );
 parameter WORD_COUNT = 64;
 
