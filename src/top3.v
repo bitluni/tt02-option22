@@ -2,7 +2,7 @@ module option23 (
     input wire [7:0] io_in,
     output wire [7:0] io_out
 );
-parameter WORD_COUNT = 32;
+parameter WORD_COUNT = 24;
 
 wire clk = io_in[0];
 wire reset = io_in[1];
