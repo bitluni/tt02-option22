@@ -3,8 +3,8 @@
 project:
   wokwi_id:    0 # If using wokwi, set this to your project's ID
   source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. Source files must be in ./src
-     - top3.v
-  top_module:  "option23"      # put the name of your top module here, make it unique by prepending your github username
+     - top.v
+  top_module:  "option22"      # put the name of your top module here, make it unique by prepending your github username
 
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
 # it does and how to operate it.
@@ -16,9 +16,9 @@ documentation:
   author:       "bitluni"      # Your name
   discord:      "bitluni#0204"      # Your discord handle - make sure to include the # part as well
   title:        "Option22"      # Project title
-  description:  "Looong shift register for POV displays"      # Short description of what your project does
-  how_it_works: "write=high: Data is shifted in on clock positive edge. Each full 8 bits will be staged to output. It will rotate rough all words with the clock. Reset only resets internal counter for the byte index."      # Longer description of how the project works
-  how_to_test:  "Keep write high and push data in with clock mayby as button."      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  description:  "Looong shift register. 22x8 bit"      # Short description of what your project does
+  how_it_works: "write=high: Data is shifted-in on clock positive edge. Each 8 clocks a full byte is buffered at the output. It rotatetes all 22 words. Reset only resets internal counter for the bit index."      # Longer description of how the project works
+  how_to_test:  "Keep write high and push 22x8 bits in. Keep clock with write low to recieve the bytes a the output"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   external_hw:  "Pink LEDs"      # Describe any external hardware needed
   language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
