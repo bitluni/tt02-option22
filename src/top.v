@@ -1,4 +1,4 @@
-module option23 (
+module option22 (
     input wire [7:0] io_in,
     output wire [7:0] io_out
 );
